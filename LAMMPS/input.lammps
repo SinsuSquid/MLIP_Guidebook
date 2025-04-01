@@ -1,0 +1,32 @@
+variable	NSTEPS		equal 20000
+variable	TIMESTEP	equal 0.00100
+variable	THERMO_FREQ	equal 100
+variable	DUMP_FREQ	equal 1000
+variable	TEBEG		equal 300.00
+variable	TEEND		equal 300.00
+variable	TAU_T		equal 0.10000
+variable	PRBEG		equal 1.00000
+variable	PREND		equal 1.00000
+variable	TAU_P		equal 1.00000
+variable	SEED		equal 42
+
+units		metal
+boundary	p p p
+atom_style	atomic
+
+read_data	init.lammps_data
+
+pair_style	mlip load_from=trained.almtp
+pair_coeff	* *
+
+thermo_style	custom step time temp pe ke etotal press vol density
+thermo		${THERMO_FREQ}
+
+velocity	all create ${TEBEG} ${SEED}
+fix		1 all npt temp ${TEBEG} ${TEEND} ${TAU_T} iso ${PRBEG} ${PREND} ${TAU_P}
+
+dump		1 all dcd ${DUMP_FREQ} eq.dcd
+dump_modify	1 unwrap yes
+
+timestep	${TIMESTEP}
+run		${NSTEPS}
