@@ -9,7 +9,7 @@ written by SinsuSquid (bgkang)
 영어로 써볼까 했는데 포기하려고요. 본의아니게 Korean-only가 되어버렸습니다.
 
 ## Backgrounds
-MTP에 관련한 설명은 발표할때 썼던 PPT 파일로 대체합니다. 대부분 아래의 논문에서 참고한 내용이니 Theory 부분을 참고하세요.
+MTP에 관련한 설명은 발표할때 썼던 자료로 대체합니다 (`Introduction to MD Simulation using Moment Tensor Potential.pdf`). 대부분 아래의 논문에서 참고한 내용이니 Theory 부분을 참고하세요.
 
 [MLIP-3: Active learning on atomic environments with moment tensor potentials](https://pubs.aip.org/aip/jcp/article/159/8/084112/2908187/MLIP-3-Active-learning-on-atomic-environments-with)
 
