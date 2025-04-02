@@ -186,8 +186,7 @@ thermo			${THERMO_FREQ}
 velocity		all create ${TEBEG} ${SEED}
 fix			1 all npt temp ${TEBEG} ${TEEND} ${TAU_T} iso ${PRBEG} ${PREND} ${TAU_P}
 
-dump			1 all dcd ${DUMP_FREQ} eq.dcd
-dump_modift		1 unwrap yes
+dump			1 all custom ${DUMP_FREQ} eq.lammpstrj id type xu yu zu fx fy fz
 
 timestep		${TIMESTEP}
 run			${NSTEPS}
