@@ -1,0 +1,5 @@
+log
+log.lammps
+*.lammpstrj
+out.cfg.0
+trained.almtp
