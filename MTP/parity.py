@@ -37,10 +37,15 @@ plt.plot([min(true.min(), pred.min()), max(true.max(), pred.max())],
 plt.xlabel("DFT Energy (eV)")
 plt.ylabel("MTP Energy (eV)")
 
-print("MAE: ", (pred - true).mean(), " eV")
-print("RMSE: ", np.sqrt(np.power((pred - true),2).mean()), " eV")
+mae = (pred-true).mean()
+rmse = np.sqrt(np.power((pred-true),2).mean())
+
+plt.annotate(f"MAE: {mae:.6f} eV\nRMSE: {rmse:.6f} eV",
+             xy = (0.1, 0.8),
+             xycoords = 'axes fraction')
 
 plt.savefig(sys.argv[3], dpi = 200)
+plt.show()
 
 print("\t>:D Done !")
 
