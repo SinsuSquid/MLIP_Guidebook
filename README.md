@@ -21,6 +21,8 @@ MTP 학습을 위해서는 MLIP-3 package가 필요하고, 이를 LAMMPS에 적�
 [MLIP-3](https://gitlab.com/ashapeev/mlip-3)<br>
 [Interface-LAMMPS-MLIP-3](https://gitlab.com/ivannovikov/interface-lammps-mlip-3)
 
+*추가 (2025.04.07): 참나, 위에 따라서 LAMMPS 다시 설치해보려니 문제가 생기는군요. 해결법은 LAMMPS 설치 과정에서 `install.sh`와 `preinstall.sh`가 실행이 되는데, 이걸 그냥 실행하지 말고 그 안에 작성된 command를 직접 하나씩 terminal에서 입력하면 영문은 모르겠지만 잘 설치됩니다. 귀신이 곡할노릇이군요.
+
 아래에 진행되는 설명은 MLIP-3와 interface가 올바르게 설치되어있고 PATH에 등록되어있으며 권한 또한 잘 잡혀있다는 가정에서 출발합니다. (모르겠으면 옆에 선배 붙잡고 물어보세요.)
 
 ## MTP Training
